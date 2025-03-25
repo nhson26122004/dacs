@@ -1,0 +1,14 @@
+package vn.doancoso.laptopshop.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import vn.doancoso.laptopshop.domain.Order;
+import vn.doancoso.laptopshop.domain.OrderDetail;
+
+@Repository
+public interface OrderDetailRepository extends JpaRepository<Order, Long> {
+    OrderDetail save(OrderDetail orderDetail);
+
+    void deleteById(long id);
+}
